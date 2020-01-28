@@ -1,0 +1,7 @@
+<h1>hello world</h1>
+
+<% @dishes.each do |dish| %>
+
+  <p><a href="/dishes/<%= dish['id'] %>"><%= dish['name'] %></a></p>
+
+<% end %>
