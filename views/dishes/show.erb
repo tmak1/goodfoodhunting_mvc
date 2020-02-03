@@ -1,3 +1,13 @@
 <h1>dish details</h1>
 
-<%= @dish['name'] %>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam veniam, quisquam inventore id distinctio voluptatum a, rerum, voluptatem adipisci modi error optio dolores veritatis totam recusandae aspernatur! Voluptatum, velit praesentium.</p>
+
+<p><%= @dish['name'] %></p>
+
+<p>number of likes: <%= @likes_count %></p>
+
+
+<form action="/likes" method="post">
+  <input type="hidden" name="dish_id" value="<%= @dish['id'] %>">
+  <button>like</button>
+</form>

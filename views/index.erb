@@ -1,5 +1,7 @@
 <h1>hello world</h1>
 
+<h2><a href="/dishes/new">post new dish</a></h2>
+
 <% @dishes.each do |dish| %>
 
   <p><a href="/dishes/<%= dish['id'] %>"><%= dish['name'] %></a></p>

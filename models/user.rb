@@ -1,3 +1,4 @@
+
 # read
 def all_users
   sql = "SELECT * FROM users;"

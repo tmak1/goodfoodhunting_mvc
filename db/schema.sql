@@ -25,7 +25,15 @@ ALTER TABLE users ADD CONSTRAINT unique_email UNIQUE (email);
 
 ALTER TABLE dishes ADD CONSTRAINT user_id_fk FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE;
 
--- alter table dishes alter column user_id set not null;
+-- alter table dishes alter column user_id set not null;E
+
+CREATE TABLE likes (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER,
+  dish_id INTEGER,
+  FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
+  FOREIGN KEY (dish_id) REFERENCES dishes (id) ON DELETE CASCADE
+);
 
 
 
